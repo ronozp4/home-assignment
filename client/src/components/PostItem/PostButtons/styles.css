@@ -1,0 +1,36 @@
+.post-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.like-wrapper {
+  position: relative;
+}
+
+.post-buttons-edit{
+  display: flex;
+  gap: 25px;
+}
+.counter {
+  border-radius: 120px;
+  background-color: #0F52BA;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  display: flex;
+  position: absolute;
+  bottom: 26px;
+  left: 20px;
+  min-width: 25px;
+}
+
+.thumbUpIcon {
+  color: #0F52BA;
+  margin-right: 15px;
+}
+
+.icons {
+  cursor: pointer;
+}

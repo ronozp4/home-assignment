@@ -6,22 +6,21 @@ import {
   Typography,
 } from "@mui/material";
 import { AddOutlined } from "@mui/icons-material";
-import { UserData } from "../../types";
 import "./styles.css";
 import { UserAvatar } from "../UserAvatar";
+import { useAuth } from "../../context/AuthContext";
 
 type HeaderProps = {
   openPostEditor: () => void;
 };
 
-export const Header: React.FC<HeaderProps> = ({ openPostEditor }) => {
-  const user: UserData = { id: 0, name: "" }; // CHANGE ME
-
+export const Header: React.FC<HeaderProps> = ({ openPostEditor}) => {
+  const { user, changeUser } = useAuth()
   return (
     <AppBar position="static">
       <Toolbar disableGutters className="app-toolbar">
         <Tooltip title="Switch User">
-          <IconButton>
+          <IconButton onClick={changeUser}>
             <UserAvatar user={user} className="user-avatar" />
           </IconButton>
         </Tooltip>

@@ -1,0 +1,8 @@
+.post-header-container {
+    display: flex;
+    gap: 10px;
+}
+
+.post-username {
+    font-size: 17px
+}
